@@ -49,12 +49,22 @@ public class Student extends Person {
         return res / getTotalCredits();
     }
 
+    @Override
+    public int compareTo(Person o) {
+        int c = super.compareTo(o);
+        if (c == 0 && o instanceof Student){
+            Student s = (Student) o;
+            Integer sId = s.id;
+            return sId.compareTo(id);
+        }
+        return c;
+    }
+
     public static void main(String[] args){
         Student first = new Student(
                 "Mario",
                 "Rossi",
                 new Date());
         String name = first.getName();
-
     }
 }
