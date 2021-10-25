@@ -8,6 +8,7 @@ public class Triangle extends Polygon {
         this.edge1 = edge1;
         this.edge2 = edge2;
         this.edge3 = edge3;
+        name = "triangle";
 
     }
     @Override
